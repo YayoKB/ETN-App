@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Nyanza"
+    tools:context=".learnerships">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnShortCoursesLearnerships"
+                style="@style/ShortCoursesButton"
+                android:layout_width="0dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnFirstAid"
+                style="@style/CourseButton"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/first_aid"
+                app:layout_constraintBottom_toTopOf="@+id/btnSewing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescLearnerships" />
+
+            <ImageButton
+                android:id="@+id/btnSewing"
+                style="@style/CourseButton"
+                android:src="@drawable/sewing"
+                app:layout_constraintBottom_toTopOf="@+id/btnLandscaping"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnFirstAid" />
+
+            <ImageButton
+                android:id="@+id/btnLandscaping"
+                style="@style/CourseButton"
+                android:src="@drawable/landscaping"
+                app:layout_constraintBottom_toTopOf="@+id/btnLifeSkills"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSewing" />
+
+            <ImageButton
+                android:id="@+id/btnLifeSkills"
+                style="@style/CourseButton"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/life_skills"
+                app:layout_constraintBottom_toTopOf="@+id/btnShortCoursesLearnerships"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLandscaping" />
+
+            <ImageButton
+                android:id="@+id/btnBack2"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgLogoLearnerships"
+
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack2" />
+
+            <ImageView
+                android:id="@+id/imgNameLearnerships"
+                style="@style/CompanyName"
+                android:src="@drawable/etn_name_wide"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack2"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoLearnerships"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnBack2"
+                app:layout_constraintTop_toTopOf="@+id/btnBack2" />
+
+            <TextView
+                android:id="@+id/tvTitleLearnerships"
+                style="@style/RegularTitle"
+                android:text="Learnerships"
+                android:textColor="@color/Limeade"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameLearnerships" />
+
+            <TextView
+                android:id="@+id/tvDescLearnerships"
+                style="@style/BodyText"
+                android:layout_marginTop="16dp"
+                android:text="\u2022 Our 6-month Learnerships take place over 12 weeks.\n\u2022 Tap to view details about a course."
+                app:layout_constraintEnd_toEndOf="@+id/btnFirstAid"
+                app:layout_constraintStart_toStartOf="@+id/btnFirstAid"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleLearnerships" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".course_firstAid">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitleFirstAid"
+                style="@style/LearnershipsTitle"
+                android:text="First Aid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameFirstAid" />
+
+            <ImageButton
+                android:id="@+id/btnBack5"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCostAmtFirstAid"
+                style="@style/CostAmount"
+                android:text="R1500"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescFirstAid"
+                app:layout_constraintStart_toEndOf="@+id/tvCostLblFirstAid" />
+
+            <TextView
+                android:id="@+id/tvDescFirstAid"
+                style="@style/BodyText"
+                android:text="This learnership teaches first aid awareness and basic life support."
+                app:layout_constraintBottom_toTopOf="@id/tvLearnFirstAid"
+                app:layout_constraintEnd_toEndOf="@+id/imgFirstAid"
+                app:layout_constraintStart_toStartOf="@+id/imgFirstAid" />
+
+            <TextView
+                android:id="@+id/tvLearnFirstAid"
+                style="@style/LearnText"
+                app:layout_constraintBottom_toTopOf="@+id/tvBulletsFirstAid"
+                app:layout_constraintEnd_toEndOf="@+id/imgFirstAid"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imgFirstAid" />
+
+            <TextView
+                android:id="@+id/tvBulletsFirstAid"
+                style="@style/BulletText"
+                android:text="\u2022 Wounds and bleeding\n\u2022 Burns and fractures\n\u2022 Emergency scene management\n\u2022 Cardio-Pulmonary Resuscitation (CPR)\n\u2022 Respiratory distress e.g., Choking, blocked airway"
+                app:layout_constraintBottom_toTopOf="@+id/btnNextFirstAid"
+                app:layout_constraintEnd_toEndOf="@+id/imgFirstAid"
+                app:layout_constraintStart_toStartOf="@+id/imgFirstAid" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgFirstAid"
+                style="@style/ImageRounded"
+                android:src="@drawable/first_aid_crop"
+                app:layout_constraintBottom_toTopOf="@+id/tvCostAmtFirstAid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleFirstAid"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <TextView
+                android:id="@+id/tvCostLblFirstAid"
+                style="@style/CostText"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescFirstAid"
+                app:layout_constraintStart_toStartOf="@+id/imgFirstAid" />
+
+            <ImageView
+                android:id="@+id/imgNameFirstAid"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack5"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoFirstAid"
+                app:layout_constraintStart_toEndOf="@+id/btnBack5"
+                app:layout_constraintTop_toTopOf="@+id/btnBack5" />
+
+            <ImageView
+                android:id="@+id/imgLogoFirstAid"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack5" />
+
+            <Button
+                android:id="@+id/btnNextFirstAid"
+                style="@style/NextCourseButton"
+                android:layout_marginBottom="16dp"
+                android:text="Next"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddCartFirstAid"
+                app:layout_constraintEnd_toEndOf="@+id/tvBulletsFirstAid"
+                app:layout_constraintStart_toStartOf="@+id/tvBulletsFirstAid" />
+
+            <Button
+                android:id="@+id/btnAddCartFirstAid"
+                style="@style/AddToCartButton"
+                android:layout_marginBottom="16dp"
+                android:text="Add to Cart"
+                app:layout_constraintBottom_toTopOf="@+id/btnBCFA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnBCFA"
+                style="@style/BookingsButton"
+                android:layout_marginBottom="24dp"
+                android:text="Book Courses"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

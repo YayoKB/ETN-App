@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".booking_confirmed" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnBackToHomeConsult"
+                style="@style/BackToHomeButton"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnBack15"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgConsultName"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack15"
+                app:layout_constraintEnd_toStartOf="@+id/imgConsultLogo"
+                app:layout_constraintStart_toEndOf="@+id/btnBack15"
+                app:layout_constraintTop_toTopOf="@+id/btnBack15" />
+
+            <ImageView
+                android:id="@+id/imgConsultLogo"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack15" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_shadow"
+                app:layout_constraintBottom_toTopOf="@+id/tvQuoteConsult"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+                app:layout_constraintWidth_percent="0.28125" />
+
+            <TextView
+                android:id="@+id/tvTitleConsult"
+                style="@style/RegularTitle"
+                android:text="Details Received!"
+                android:textColor="@color/Acid_Green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgConsultName" />
+
+            <TextView
+                android:id="@+id/tvDescConsult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Thank you for taking an interest in our courses. A consultant has received your details and will contact you soon!"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleConsult"
+                app:layout_constraintWidth_percent="0.75" />
+
+            <TextView
+                android:id="@+id/tvDetailsConsult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Please find your selected courses and reference number below:"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvDescConsult"
+                app:layout_constraintStart_toStartOf="@+id/tvDescConsult"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescConsult" />
+
+            <TextView
+                android:id="@+id/tvQuoteConsult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="“What you do today can improve all of your tomorrows.”"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/tvRalphConsult"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRalphConsult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Ralph Marston"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnBackToHomeConsult"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailsConsult"
+                app:layout_constraintWidth_percent="0.75">
+
+                <TextView
+                    android:id="@+id/lblCourseNameConsult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Courses Selected:"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvRef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Reference number:"
+                    android:textColor="@color/Jet"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvConsultCourses" />
+
+                <TextView
+                    android:id="@+id/tvRefNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/Jet"
+                    android:textSize="24sp"
+                    app:flow_horizontalAlign="end"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvRef" />
+
+                <TextView
+                    android:id="@+id/tvConsultCourses"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCourseNameConsult"
+                    app:lineHeight="40sp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

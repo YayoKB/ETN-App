@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".course_cooking" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnBack9"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgNameCooking"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack9"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoCooking"
+                app:layout_constraintStart_toEndOf="@+id/btnBack9"
+                app:layout_constraintTop_toTopOf="@+id/btnBack9" />
+
+            <ImageView
+                android:id="@+id/imgLogoCooking"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack9" />
+
+            <TextView
+                android:id="@+id/tvTitleCooking"
+                style="@style/ShortCoursesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cooking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameCooking" />
+
+            <TextView
+                android:id="@+id/tvCostLblCooking"
+                style="@style/CostText"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescCooking"
+                app:layout_constraintStart_toStartOf="@+id/imgCooking" />
+
+            <TextView
+                style="@style/CostAmount"
+                android:text="R750"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescCooking"
+                app:layout_constraintStart_toEndOf="@+id/tvCostLblCooking" />
+
+            <TextView
+                android:id="@+id/tvDescCooking"
+                style="@style/BodyText"
+                android:text="This short course teaches you how to prepare and cook nutritious family meals."
+                app:layout_constraintBottom_toTopOf="@+id/tvLearnCooking"
+                app:layout_constraintEnd_toEndOf="@+id/imgCooking"
+                app:layout_constraintStart_toStartOf="@+id/imgCooking" />
+
+            <TextView
+                android:id="@+id/tvLearnCooking"
+                style="@style/LearnText"
+                app:layout_constraintBottom_toTopOf="@+id/tvBulletsCooking"
+                app:layout_constraintEnd_toEndOf="@+id/imgCooking"
+                app:layout_constraintStart_toStartOf="@+id/imgCooking" />
+
+            <TextView
+                android:id="@+id/tvBulletsCooking"
+                style="@style/BulletText"
+                android:text="\u2022 Nutritional requirements for a healthy body\n\u2022 Types of protein, carbohydrates and vegetables\n\u2022 Planning meals\n\u2022 Preparation and cooking of meals"
+                app:layout_constraintBottom_toTopOf="@+id/btnPrevCooking"
+                app:layout_constraintEnd_toEndOf="@+id/imgCooking"
+                app:layout_constraintStart_toStartOf="@+id/imgCooking" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgCooking"
+                style="@style/ImageRounded"
+                android:src="@drawable/cooking_crop"
+                app:layout_constraintBottom_toTopOf="@+id/tvCostLblCooking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleCooking"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <Button
+                android:id="@+id/btnAddCartCooking"
+                style="@style/AddToCartButton"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnBCCook"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnPrevCooking"
+                style="@style/PrevCourseButton"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddCartCooking"
+                app:layout_constraintStart_toStartOf="@+id/tvBulletsCooking" />
+
+            <Button
+                android:id="@+id/btnNextCooking"
+                style="@style/NextCourseButton"
+                app:layout_constraintBottom_toBottomOf="@+id/btnPrevCooking"
+                app:layout_constraintEnd_toEndOf="@+id/tvBulletsCooking"
+                app:layout_constraintTop_toTopOf="@+id/btnPrevCooking" />
+
+            <Button
+                android:id="@+id/btnBCCook"
+                style="@style/BookingsButton"
+                android:layout_marginBottom="24dp"
+                android:text="Book Courses"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

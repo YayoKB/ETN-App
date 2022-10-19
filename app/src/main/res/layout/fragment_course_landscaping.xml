@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".course_landscaping" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnBack6"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgNameLand"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack6"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoLand"
+                app:layout_constraintStart_toEndOf="@+id/btnBack6"
+                app:layout_constraintTop_toTopOf="@+id/btnBack6" />
+
+            <ImageView
+                android:id="@+id/imgLogoLand"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitleLand"
+                style="@style/LearnershipsTitle"
+                android:text="Landscaping"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameLand" />
+
+            <TextView
+                android:id="@+id/tvCostLblLand"
+                style="@style/CostText"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescLand"
+                app:layout_constraintStart_toStartOf="@+id/imgLandscaping" />
+
+            <TextView
+                android:id="@+id/tvCostAmtLand"
+                style="@style/CostAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R1500"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescLand"
+                app:layout_constraintStart_toEndOf="@+id/tvCostLblLand" />
+
+            <TextView
+                android:id="@+id/tvDescLand"
+                style="@style/BodyText"
+                android:text="This learnership teaches how to provide landscaping services for new and established gardens."
+                app:layout_constraintBottom_toTopOf="@+id/tvLearnLand"
+                app:layout_constraintEnd_toEndOf="@+id/imgLandscaping"
+                app:layout_constraintStart_toStartOf="@+id/imgLandscaping" />
+
+            <TextView
+                android:id="@+id/tvLearnLand"
+                style="@style/LearnText"
+                app:layout_constraintBottom_toTopOf="@+id/tvBulletsLand"
+                app:layout_constraintEnd_toEndOf="@+id/imgLandscaping"
+                app:layout_constraintStart_toStartOf="@+id/imgLandscaping" />
+
+            <TextView
+                android:id="@+id/tvBulletsLand"
+                style="@style/BulletText"
+                android:text="\u2022 Indigenous and exotic plants and trees\n\u2022 Fixed structures (fountains, statues, benches, tables, built-in braai)\n\u2022 Balancing of plant and trees in a garden\n\u2022 Aesthetics of plant shapes and colours\n\u2022 Garden Layout"
+                app:layout_constraintBottom_toTopOf="@+id/btnPrevLandscaping"
+                app:layout_constraintEnd_toEndOf="@+id/imgLandscaping"
+                app:layout_constraintStart_toStartOf="@+id/imgLandscaping" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgLandscaping"
+                style="@style/ImageRounded"
+                android:src="@drawable/landscaping_crop"
+                app:layout_constraintBottom_toTopOf="@+id/tvCostAmtLand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleLand"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <Button
+                android:id="@+id/btnAddCartLandscaping"
+                style="@style/AddToCartButton"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnBCLand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnPrevLandscaping"
+                style="@style/PrevCourseButton"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddCartLandscaping"
+                app:layout_constraintStart_toStartOf="@+id/tvBulletsLand" />
+
+            <Button
+                android:id="@+id/btnNextLandscaping"
+                style="@style/NextCourseButton"
+                app:layout_constraintBottom_toBottomOf="@+id/btnPrevLandscaping"
+                app:layout_constraintEnd_toEndOf="@+id/tvBulletsLand"
+                app:layout_constraintTop_toTopOf="@+id/btnPrevLandscaping" />
+
+            <Button
+                android:id="@+id/btnBCLand"
+                style="@style/BookingsButton"
+                android:layout_marginBottom="24dp"
+                android:text="Book Courses"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

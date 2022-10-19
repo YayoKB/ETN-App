@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".course_gardenMaintenance" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnBack10"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgNameGarden"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack10"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoGarden"
+                app:layout_constraintStart_toEndOf="@+id/btnBack10"
+                app:layout_constraintTop_toTopOf="@+id/btnBack10" />
+
+            <ImageView
+                android:id="@+id/imgLogoGarden"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack10" />
+
+            <TextView
+                android:id="@+id/tvTitleGarden"
+                style="@style/ShortCoursesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Garden Maintenance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameGarden" />
+
+            <TextView
+                android:id="@+id/tvCostLblGarden"
+                style="@style/CostText"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescGarden"
+                app:layout_constraintStart_toStartOf="@+id/imgGardenMaintenance" />
+
+            <TextView
+                android:id="@+id/tvCostAmtGarden"
+                style="@style/CostAmount"
+                android:text="R750"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescGarden"
+                app:layout_constraintStart_toEndOf="@+id/tvCostLblGarden" />
+
+            <TextView
+                android:id="@+id/tvDescGarden"
+                style="@style/BodyText"
+                android:text="This short course provides basic knowledge of watering, pruning and planting in a domestic garden."
+                app:layout_constraintBottom_toTopOf="@+id/tvLearnGarden"
+                app:layout_constraintEnd_toEndOf="@+id/imgGardenMaintenance"
+                app:layout_constraintStart_toStartOf="@+id/imgGardenMaintenance" />
+
+            <TextView
+                android:id="@+id/tvLearnGarden"
+                style="@style/LearnText"
+                app:layout_constraintBottom_toTopOf="@+id/tvBulletsGarden"
+                app:layout_constraintEnd_toEndOf="@+id/imgGardenMaintenance"
+                app:layout_constraintStart_toStartOf="@+id/imgGardenMaintenance" />
+
+            <TextView
+                android:id="@+id/tvBulletsGarden"
+                style="@style/BulletText"
+                android:text="\u2022 Water restrictions and the watering requirements of indigenous and exotic plants\n\u2022 Pruning and propagation of plants\n\u2022 Planting techniques for different plant types"
+                app:layout_constraintBottom_toTopOf="@+id/btnPrevGarden"
+                app:layout_constraintEnd_toEndOf="@+id/imgGardenMaintenance"
+                app:layout_constraintStart_toStartOf="@+id/imgGardenMaintenance" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgGardenMaintenance"
+                style="@style/ImageRounded"
+                android:src="@drawable/garden_maintenance_crop"
+                app:layout_constraintBottom_toTopOf="@+id/tvCostAmtGarden"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleGarden"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <Button
+                android:id="@+id/btnAddCartGarden"
+                style="@style/AddToCartButton"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnBCGM"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnPrevGarden"
+                style="@style/PrevCourseButton"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddCartGarden"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnBCGM"
+                style="@style/BookingsButton"
+                android:layout_marginBottom="24dp"
+                android:text="Book Courses"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

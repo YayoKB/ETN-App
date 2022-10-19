@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".course_childMinding" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnBack8"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgNameChild"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack8"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoChild"
+                app:layout_constraintStart_toEndOf="@+id/btnBack8"
+                app:layout_constraintTop_toTopOf="@+id/btnBack8" />
+
+            <ImageView
+                android:id="@+id/imgLogoChild"
+                style="@style/LogoTopRight"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack8" />
+
+            <TextView
+                android:id="@+id/tvTitleChild"
+                style="@style/ShortCoursesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Child Minding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameChild" />
+
+            <TextView
+                android:id="@+id/tvCostLblChild"
+                style="@style/CostText"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescChild"
+                app:layout_constraintStart_toStartOf="@+id/imgChildMinding" />
+
+            <TextView
+                style="@style/CostAmount"
+                android:text="R750"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescChild"
+                app:layout_constraintStart_toEndOf="@+id/tvCostLblChild" />
+
+            <TextView
+                android:id="@+id/tvDescChild"
+                style="@style/BodyText"
+                android:text="This short course teaches basic child and baby care."
+                app:layout_constraintBottom_toTopOf="@+id/tvLearnChild"
+                app:layout_constraintEnd_toEndOf="@+id/imgChildMinding"
+                app:layout_constraintStart_toStartOf="@+id/imgChildMinding" />
+
+            <TextView
+                android:id="@+id/tvLearnChild"
+                style="@style/LearnText"
+                app:layout_constraintBottom_toTopOf="@+id/tvBulletsChild"
+                app:layout_constraintEnd_toEndOf="@+id/imgChildMinding"
+                app:layout_constraintStart_toStartOf="@+id/imgChildMinding" />
+
+            <TextView
+                android:id="@+id/tvBulletsChild"
+                style="@style/BulletText"
+                android:text="\u2022 Birth to six-month-old baby needs\n\u2022 Seven-month to one-year-old needs\n\u2022 Toddler needs\n\u2022 Educational Toys"
+                app:layout_constraintBottom_toTopOf="@+id/btnNextChild"
+                app:layout_constraintEnd_toEndOf="@+id/imgChildMinding"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imgChildMinding" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgChildMinding"
+                style="@style/ImageRounded"
+                android:src="@drawable/child_minding_crop"
+                app:layout_constraintBottom_toTopOf="@+id/tvCostLblChild"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleChild"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <Button
+                android:id="@+id/btnNextChild"
+                style="@style/NextCourseButton"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddCartChild"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnAddCartChild"
+                style="@style/AddToCartButton"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnBCCM"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnBCCM"
+                style="@style/BookingsButton"
+                android:layout_marginBottom="24dp"
+                android:text="Book Courses"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

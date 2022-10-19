@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".course_sewing" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnBack3"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgNameSewing"
+                style="@style/CompanyName"
+                android:src="@drawable/etn_name_wide"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack3"
+                app:layout_constraintEnd_toStartOf="@+id/imgSewingLogo"
+                app:layout_constraintStart_toEndOf="@+id/btnBack3"
+                app:layout_constraintTop_toTopOf="@+id/btnBack3" />
+
+            <ImageView
+                android:id="@+id/imgSewingLogo"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack3" />
+
+            <TextView
+                android:id="@+id/tvTitleSewing"
+                style="@style/LearnershipsTitle"
+                android:text="Sewing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameSewing" />
+
+            <TextView
+                android:id="@+id/tvCostLblSewing"
+                style="@style/CostText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescSewing"
+                app:layout_constraintStart_toStartOf="@+id/imgSewing" />
+
+            <TextView
+                style="@style/CostAmount"
+                android:text="R1500"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescSewing"
+                app:layout_constraintStart_toEndOf="@+id/tvCostLblSewing" />
+
+            <TextView
+                android:id="@+id/tvDescSewing"
+                style="@style/BodyText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="This learnership teaches how to do alterations and new garment tailoring services."
+                app:layout_constraintBottom_toTopOf="@+id/tvLearnSewing"
+                app:layout_constraintEnd_toEndOf="@+id/imgSewing"
+                app:layout_constraintStart_toStartOf="@+id/imgSewing" />
+
+            <TextView
+                android:id="@+id/tvLearnSewing"
+                style="@style/LearnText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/tvBulletsSewing"
+                app:layout_constraintEnd_toEndOf="@+id/imgSewing"
+                app:layout_constraintStart_toStartOf="@+id/imgSewing" />
+
+            <TextView
+                android:id="@+id/tvBulletsSewing"
+                style="@style/BulletText"
+                android:text="\u2022 Types of stitches\n\u2022 Threading a sewing machine\n\u2022 Sewing buttons, zips, hems and seams\n\u2022 Alterations\n\u2022 Designing and sewing new garments"
+                app:layout_constraintBottom_toTopOf="@+id/btnPrevSewing"
+                app:layout_constraintEnd_toEndOf="@+id/imgSewing"
+                app:layout_constraintStart_toStartOf="@+id/imgSewing" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgSewing"
+                style="@style/ImageRounded"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sewing_crop"
+                app:layout_constraintBottom_toTopOf="@+id/tvCostLblSewing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleSewing"
+                app:shapeAppearanceOverlay="@style/ImageRounded"
+                app:srcCompat="@drawable/sewing_crop" />
+
+            <Button
+                android:id="@+id/btnAddCartSewing"
+                style="@style/AddToCartButton"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnBCSewing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnPrevSewing"
+                style="@style/PrevCourseButton"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddCartSewing"
+                app:layout_constraintStart_toStartOf="@+id/tvBulletsSewing" />
+
+            <Button
+                android:id="@+id/btnNextSewing"
+                style="@style/NextCourseButton"
+                app:layout_constraintEnd_toEndOf="@+id/tvBulletsSewing"
+                app:layout_constraintTop_toTopOf="@+id/btnPrevSewing" />
+
+            <Button
+                android:id="@+id/btnBCSewing"
+                style="@style/BookingsButton"
+                android:layout_marginBottom="24dp"
+                android:text="Book Courses"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

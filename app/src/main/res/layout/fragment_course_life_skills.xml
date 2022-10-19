@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".course_lifeSkills">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnBack4"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgNameLife"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack4"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoLife"
+                app:layout_constraintStart_toEndOf="@+id/btnBack4"
+                app:layout_constraintTop_toTopOf="@+id/btnBack4" />
+
+            <ImageView
+                android:id="@+id/imgLogoLife"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack4" />
+
+            <TextView
+                android:id="@+id/tvTitleLife"
+                style="@style/LearnershipsTitle"
+                android:text="Life Skills"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameLife" />
+
+            <TextView
+                android:id="@+id/tvCostLblLife"
+                style="@style/CostText"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescLife"
+                app:layout_constraintStart_toStartOf="@+id/imgLifeSkills" />
+
+            <TextView
+                style="@style/CostAmount"
+                android:text="R1500"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescLife"
+                app:layout_constraintStart_toEndOf="@+id/tvCostLblLife" />
+
+            <TextView
+                android:id="@+id/tvDescLife"
+                style="@style/BodyText"
+                android:text="This learnership provides the skills to navigate basic life necessities."
+                app:layout_constraintBottom_toTopOf="@+id/tvLearnLife"
+                app:layout_constraintEnd_toEndOf="@+id/imgLifeSkills"
+                app:layout_constraintStart_toStartOf="@+id/imgLifeSkills" />
+
+            <TextView
+                android:id="@+id/tvLearnLife"
+                style="@style/LearnText"
+                app:layout_constraintBottom_toTopOf="@+id/tvBulletsLife"
+                app:layout_constraintEnd_toEndOf="@+id/imgLifeSkills"
+                app:layout_constraintStart_toStartOf="@+id/imgLifeSkills" />
+
+            <TextView
+                android:id="@+id/tvBulletsLife"
+                style="@style/BulletText"
+                android:text="\u2022 Opening a bank account\n\u2022 Basic labour law (know your rights)\n\u2022 Basic reading and writing literacy\n\u2022 Basic numeric literacy"
+                app:layout_constraintBottom_toTopOf="@+id/btnPrevLife"
+                app:layout_constraintEnd_toEndOf="@+id/imgLifeSkills"
+                app:layout_constraintStart_toStartOf="@+id/imgLifeSkills" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgLifeSkills"
+                style="@style/ImageRounded"
+                android:src="@drawable/life_skills_crop"
+                app:layout_constraintBottom_toTopOf="@+id/tvCostLblLife"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleLife"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <Button
+                android:id="@+id/btnAddCartLife"
+                style="@style/AddToCartButton"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnBCLS"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnPrevLife"
+                style="@style/PrevCourseButton"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddCartLife"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnBCLS"
+                style="@style/BookingsButton"
+                android:layout_marginBottom="24dp"
+                android:text="Book Courses"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="theme">#355800</color>
+    <color name="Jet">#313131</color>
+    <color name="Nyanza">#EEFFD3</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Acid_Green">#A8C300</color>
+    <color name="Mindaro">#D7FF97</color>
+    <color name="Limeade">#65A800</color>
+    <color name="American_Yellow">#EAB700</color>
+    <color name="Army_Green">#243C00</color>
+    <color name="Jet_Transparent">#838383</color>
+</resources>

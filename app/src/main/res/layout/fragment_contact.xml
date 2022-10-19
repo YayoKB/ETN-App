@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".contact" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnBackToHomeContact"
+                style="@style/BackToHomeButton"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnBack12"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                style="@style/ImageRounded"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/map_3"
+                app:layout_constraintBottom_toTopOf="@+id/btnBackToHomeContact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOfficeMayfair"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgMapParktown"
+                style="@style/ImageRounded"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/map_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOfficePark"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <ImageView
+                android:id="@+id/imgContactName"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack12"
+                app:layout_constraintEnd_toStartOf="@+id/imgContactLogo"
+                app:layout_constraintStart_toEndOf="@+id/btnBack12"
+                app:layout_constraintTop_toTopOf="@+id/btnBack12" />
+
+            <ImageView
+                android:id="@+id/imgContactLogo"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack12" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgMapKensington"
+                style="@style/ImageRounded"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/map_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOfficeKens"
+                app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+            <TextView
+                android:id="@+id/tvMayfair"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Mayfair Office"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/Jet"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgMapParktown" />
+
+            <TextView
+                android:id="@+id/tvParktown"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Parktown Office"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/Jet"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgMapKensington" />
+
+            <TextView
+                android:id="@+id/tvKensington"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Kensington Office"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/Jet"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactEmailAddress" />
+
+            <TextView
+                android:id="@+id/tvTitleContact"
+                style="@style/RegularTitle"
+                android:text="Contact Details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgContactName" />
+
+            <TextView
+                android:id="@+id/tvContactPhoneLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Phone Number:"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleContact" />
+
+            <TextView
+                android:id="@+id/tvContactPhoneNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="021 713 4983"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactPhoneLbl" />
+
+            <TextView
+                android:id="@+id/tvContactEmailLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Email Address:"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactPhoneNo" />
+
+            <TextView
+                android:id="@+id/tvContactEmailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="contact@etn.co.za"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactEmailLbl" />
+
+            <TextView
+                android:id="@+id/tvOfficeKens"
+                style="@style/BodyText"
+                android:layout_marginTop="16dp"
+                android:text="63 Roberts Ave,  Kensington, Johannesburg, 2101"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/tvKensington"
+                app:layout_constraintStart_toStartOf="@+id/tvKensington"
+                app:layout_constraintTop_toBottomOf="@+id/tvKensington" />
+
+            <TextView
+                android:id="@+id/tvOfficePark"
+                style="@style/BodyText"
+                android:layout_marginTop="16dp"
+                android:text="6 Victoria Ave, Parktown, Johannesburg, 2193"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/tvParktown"
+                app:layout_constraintStart_toStartOf="@+id/tvParktown"
+                app:layout_constraintTop_toBottomOf="@+id/tvParktown" />
+
+            <TextView
+                android:id="@+id/tvOfficeMayfair"
+                style="@style/BodyText"
+                android:layout_marginTop="16dp"
+                android:text="102 Central Rd, Mayfair, Johannesburg, 2108"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/tvMayfair"
+                app:layout_constraintStart_toStartOf="@+id/tvMayfair"
+                app:layout_constraintTop_toBottomOf="@+id/tvMayfair" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

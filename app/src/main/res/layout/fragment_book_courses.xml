@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".book_courses" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnBackBook"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgNameBook"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBackBook"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoBook"
+                app:layout_constraintStart_toEndOf="@+id/btnBackBook"
+                app:layout_constraintTop_toTopOf="@+id/btnBackBook" />
+
+            <ImageView
+                android:id="@+id/imgLogoBook"
+                style="@style/LogoTopRight"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBackBook"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBackBook" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDiscountBullets"
+                app:layout_constraintWidth_percent="0.76">
+
+                <EditText
+                    android:id="@+id/edtCity"
+                    style="@style/BookingInput"
+                    android:hint="Type your city here..."
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCityLbl" />
+
+                <EditText
+                    android:id="@+id/edtSuburb"
+                    style="@style/BookingInput"
+                    android:hint="Type your suburb here..."
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSuburbLbl" />
+
+                <EditText
+                    android:id="@+id/edtStreetAddress"
+                    style="@style/BookingInput"
+                    android:hint="Type your street address here..."
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStreetLbl" />
+
+                <EditText
+                    android:id="@+id/edtEmailAddress"
+                    style="@style/BookingInput"
+                    android:hint="Type your email address here..."
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEmailLbl" />
+
+                <EditText
+                    android:id="@+id/edtFirstName"
+                    style="@style/BookingInput"
+                    android:hint="Type your first name here..."
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNameLbl" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumber"
+                    style="@style/BookingInput"
+                    android:hint="Type your phone number here..."
+                    android:inputType="phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPhoneLbl" />
+
+                <EditText
+                    android:id="@+id/edtLastName"
+                    style="@style/BookingInput"
+                    android:hint="Type your last name here..."
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurnameLbl" />
+
+                <EditText
+                    android:id="@+id/edtZIP"
+                    style="@style/BookingInput"
+                    android:hint="Type your ZIP/Postal Code here..."
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvZIPLbl" />
+
+                <TextView
+                    android:id="@+id/tvZIPLbl"
+                    style="@style/LearnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="ZIP/Postal Code:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtCity" />
+
+                <TextView
+                    android:id="@+id/tvCityLbl"
+                    style="@style/LearnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="City:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtSuburb" />
+
+                <TextView
+                    android:id="@+id/tvSuburbLbl"
+                    style="@style/LearnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Suburb:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtStreetAddress" />
+
+                <TextView
+                    android:id="@+id/tvStreetLbl"
+                    style="@style/LearnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_black"
+                    android:text="Street Address:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtEmailAddress" />
+
+                <TextView
+                    android:id="@+id/tvEmailLbl"
+                    style="@style/LearnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_black"
+                    android:text="Email Address:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtPhoneNumber" />
+
+                <TextView
+                    android:id="@+id/tvNameLbl"
+                    style="@style/LearnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSurnameLbl"
+                    style="@style/LearnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_black"
+                    android:text="Last Name:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtFirstName" />
+
+                <TextView
+                    android:id="@+id/tvPhoneLbl"
+                    style="@style/LearnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Phone Number:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtLastName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+                app:layout_constraintWidth_percent="0.76">
+
+                <CheckBox
+                    android:id="@+id/cbFirstAid"
+                    style="@style/Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="First Aid"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCbDesc" />
+
+                <CheckBox
+                    android:id="@+id/cbSewing"
+                    style="@style/Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_black"
+                    android:text="Sewing"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbFirstAid" />
+
+                <CheckBox
+                    android:id="@+id/cbLandscaping"
+                    style="@style/Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_black"
+                    android:text="Landscaping"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbSewing" />
+
+                <CheckBox
+                    android:id="@+id/cbLifeSkills"
+                    style="@style/Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Life Skills"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbLandscaping" />
+
+                <CheckBox
+                    android:id="@+id/cbChildMinding"
+                    style="@style/Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Child Minding"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbLifeSkills" />
+
+                <CheckBox
+                    android:id="@+id/cbCooking"
+                    style="@style/Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Cooking"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbChildMinding" />
+
+                <CheckBox
+                    android:id="@+id/cbGardenMaintenance"
+                    style="@style/Checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Garden Maintenance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbCooking" />
+
+                <TextView
+                    android:id="@+id/tvCbDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Select the courses you wish to take:"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="R750"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cbGardenMaintenance" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="R750"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbCooking"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cbCooking" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="R1500"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbLifeSkills"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cbLifeSkills" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="R1500"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbLandscaping"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cbLandscaping" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="R1500"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbSewing"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cbSewing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="R1500"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbFirstAid"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cbFirstAid" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="R750"
+                    android:textColor="@color/Jet"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbChildMinding"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cbChildMinding" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvTitleBookCourses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Book Our Courses"
+                android:textAlignment="center"
+                android:textColor="@color/Acid_Green"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameBook" />
+
+            <TextView
+                android:id="@+id/tvDescBookCourses"
+                style="@style/BodyText"
+                android:layout_marginTop="16dp"
+                android:text="Please enter your details below and any courses you would like to take. You may make use of the calculator button below to provide you with your quote."
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleBookCourses" />
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="We have discounts available:"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/tvConsult" />
+
+            <TextView
+                android:id="@+id/tvDiscountBullets"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="\u2022 2 Courses - 5% off\n\u2022 3 Courses - 10% off\n\u2022 More than 3 Courses - 15% off"
+                android:textAlignment="center"
+                android:textColor="@color/Jet"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/tvDiscount" />
+
+            <Button
+                android:id="@+id/btnCalculate"
+                style="@style/CalculateFeesButton"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:elegantTextHeight="false"
+                app:layout_constrainedHeight="false"
+                app:layout_constraintBottom_toTopOf="@+id/btnConfirm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnConsult" />
+
+            <Button
+                android:id="@+id/btnConfirm"
+                style="@style/ConfirmButton"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvConsult"
+                style="@style/BodyText"
+                android:layout_marginTop="16dp"
+                android:text="Optionally, you may choose to request a consultant to contact you without making a booking first."
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvDescBookCourses"
+                app:layout_constraintStart_toStartOf="@+id/tvDescBookCourses"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescBookCourses" />
+
+            <Button
+                android:id="@+id/btnConsult"
+                style="@style/BookingsButton"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/Army_Green"
+                android:text="Request Consultant"
+                android:textColor="@color/White"
+                app:icon="@drawable/ic_person_48"
+                app:iconTint="@color/White"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

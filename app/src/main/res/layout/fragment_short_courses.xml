@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD3"
+    tools:context=".short_courses" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnBookCourses2"
+                style="@style/BookingsButton"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnCooking"
+                style="@style/CourseButton"
+                android:src="@drawable/cookingg"
+                app:layout_constraintBottom_toTopOf="@+id/btnGardenMaintenance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnChildMinding" />
+
+            <ImageButton
+                android:id="@+id/btnBack7"
+                style="@style/BackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnChildMinding"
+                style="@style/CourseButton"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/child_minding"
+                app:layout_constraintBottom_toTopOf="@+id/btnCooking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescShortCourses" />
+
+            <ImageButton
+                android:id="@+id/btnGardenMaintenance"
+                style="@style/CourseButton"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/garden_maintenance"
+                app:layout_constraintBottom_toTopOf="@+id/btnBookCourses2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnCooking" />
+
+            <ImageView
+                android:id="@+id/imgNameShortCourses"
+                style="@style/CompanyName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack7"
+                app:layout_constraintEnd_toStartOf="@+id/imgLogoShortCourses"
+                app:layout_constraintStart_toEndOf="@+id/btnBack7"
+                app:layout_constraintTop_toTopOf="@+id/btnBack7" />
+
+            <ImageView
+                android:id="@+id/imgLogoShortCourses"
+                style="@style/LogoTopRight"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack7" />
+
+            <TextView
+                android:id="@+id/tvTitleShortCourses"
+                style="@style/RegularTitle"
+                android:text="Short Courses"
+                android:textColor="@color/American_Yellow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNameShortCourses" />
+
+            <TextView
+                android:id="@+id/tvDescShortCourses"
+                style="@style/BodyText"
+                android:layout_marginTop="16dp"
+                android:text="\u2022 Our Short Courses take place over 6 weeks.\n\u2022 Tap to view details about a course."
+                app:layout_constraintEnd_toEndOf="@+id/btnChildMinding"
+                app:layout_constraintStart_toStartOf="@+id/btnChildMinding"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleShortCourses" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
