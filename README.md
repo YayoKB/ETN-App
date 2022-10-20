@@ -50,8 +50,8 @@ This group project formed part of the Work Integrated Learning module where we h
 4. Designed prototypes and mockups of both the app and website using Figma, integrating the best design components from each member's previous wireframe. (About 90% of my design was used in the final design).
 
 ### III. Development (Group)
-5. Developed the unstyled mobile app and unstyled website
-6. Unstyled app and website were styled
+5. Developed the unstyled mobile app (Matthew) and unstyled website (Gérard)
+6. Unstyled app and website were styled (Kate)
 7. Pass the app and website back and forth to add features, fix bugs and update styling
 8. Release app and website
 
