@@ -1,4 +1,6 @@
-<h1 align="center">Empowering the Nation App</h1>
+<h1 align="center">🌱 Empowering the Nation App 🌱</h1>
+
+<div align="center" display="inline"><a href="https://github.com/YayoKB/ETN-Website">Click here for the Website version</a></div>
 
 # Overview
 ## 🤝🏼 Team members:
