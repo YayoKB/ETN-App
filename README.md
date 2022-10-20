@@ -1,5 +1,7 @@
 <h1 align="center">🌱 Empowering the Nation App 🌱</h1>
 
+<div align="center"><img height="600" src="https://user-images.githubusercontent.com/38580104/196968284-faa57a8b-7276-4674-8a19-e97750d2dc50.png"/></div>
+
 <div align="center" display="inline"><a href="https://github.com/YayoKB/ETN-Website">Click here for the Website version</a></div>
 
 # Overview
